@@ -1,0 +1,160 @@
+:root{
+    --cor-de-fundo: #8a0015;
+    --cor-de-texto: #fffedf;
+    --cor-calculadora: #332d27;
+    --cor-botoes: #9c9c9caf;
+    --cor-botoes-hover: #9c9c9cfd;
+    --cor-botoes-click: #6d6d6dfd;
+    --cor-botoes-border: #fcfcfcb4;
+    --cor-botoes-border-hover: #fefeff;
+    --cor-botoes-border-click: #ffffffe1;
+    --cor-display: #2f3559;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-texto);
+}
+
+h1{
+    margin-top: 1rem;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculadora{
+    background-color: var(--cor-calculadora);
+    margin-top: 2rem;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #7e7e7e;
+    border-radius: 10px;
+}
+
+.calculadora button{
+    background-color: var(--cor-botoes);
+    border-color: var(--cor-botoes-border);
+    border-radius: 6px;
+}
+
+.calculadora button:hover{
+    background-color: var(--cor-botoes-hover);
+    border-color: var(--cor-botoes-border-hover);
+}
+
+.calculadora button:active{
+    background-color: var(--cor-botoes-click);
+    border-color: var(--cor-botoes-border-click);
+}
+
+.display{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1rem 1.3rem;
+    text-align: end;
+    background-color: var(--cor-display);
+    width: 90%;
+    height: 10%;
+}
+
+.display p{
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*talver precise mudar esse justify-content*/
+    justify-content: space-around;
+}
+
+.container button{
+    font-size: 36px;
+}
+
+.numeros{
+    margin-top: 1rem;
+    margin-left: 10px;
+}
+
+.numeros button{
+    padding: 7px 12px;
+}
+
+.numerosL1, .numerosL2, .numerosL3, .numerosL4{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.numerosL2, .numerosL3, .numerosL4{
+    margin-top: 1rem;
+}
+
+.numerosL4{
+    gap:1.4rem;
+}
+
+.numerosL4 #zerozero{
+    font-size: 32px;
+    padding: 7px 5px;
+}
+
+.numerosL4 #ponto{
+    padding: 7px 17px;
+    padding-right: 18px;
+}
+
+.operacoes{
+    display: flex;
+    flex-direction: column;
+    margin-top:1rem;    
+    margin-right: 0.5rem;
+}
+
+.operacoes #liga-desliga{
+    background-color: #ad031d;
+    color: #f3efef;
+}
+
+.operacoes #liga-desliga:active{
+    background-color: #960016;
+}
+
+.operacoes #igual{
+    background-color: #026796;
+}
+
+.operacoes button{
+    padding: 7px 10px;
+}
+
+.soma-sub, .mult-div, #igual{
+    margin-top: 1rem;
+}
+
+.soma-sub, .mult-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.soma-sub button, .mult-div button{
+    padding: 7px 18px;
+}
+
+.soma-sub #soma{
+    padding: 7px 15px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraJS</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <div class="flex-container">
+        <div class="calculadora">
+            <div class="display">
+                <p id="textoDisplay"></p>
+            </div>
+            <div class="container">
+                <div class="numeros">
+                    <div class="numerosL1">
+                        <button class="nums" onclick="salvaNum(this)">1</button>
+                        <button class="nums" onclick="salvaNum(this)">2</button>
+                        <button class="nums" onclick="salvaNum(this)">3</button>
+                    </div>
+                    <div class="numerosL2">
+                        <button class="nums" onclick="salvaNum(this)">4</button>
+                        <button class="nums" onclick="salvaNum(this)">5</button>
+                        <button class="nums" onclick="salvaNum(this)">6</button>
+                    </div>
+                    <div class="numerosL3">
+                        <button class="nums" onclick="salvaNum(this)">7</button>
+                        <button class="nums" onclick="salvaNum(this)">8</button>
+                        <button class="nums" onclick="salvaNum(this)">9</button>
+                    </div>
+                    <div class="numerosL4">
+                        <button id="zerozero" onclick="salvaNum(this)">00</button>
+                        <button class="nums" onclick="salvaNum(this)">0</button>
+                        <button id="ponto" onclick="salvaNum(this)">.</button>
+                    </div>
+                </div>
+                <div class="operacoes">
+                    <button id="liga-desliga" onclick="liga_desliga()">On/Off</button>
+                    <div class="soma-sub">
+                        <button id="soma" onclick="setOperacao(this)">+</button>
+                        <button id="sub" onclick="setOperacao(this)">-</button>
+                    </div>
+                    <div class="mult-div">
+                        <button id="mult" onclick="setOperacao(this)">*</button>
+                        <button id="div" onclick="setOperacao(this)">/</button>
+                    </div>
+                    <button id="igual" onclick="resultado()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
