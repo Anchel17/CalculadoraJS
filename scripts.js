@@ -1,6 +1,8 @@
 let display = document.getElementById("textoDisplay");
-let numero1 = "";
-let numero2 = "";
+let num1String = "";
+let numero1 = 0;
+let num2String = "";
+let numero2 = 0;
 let result;
 let op;
 let ligado = false;
@@ -8,14 +10,16 @@ let ligado = false;
 function salvaNum(el){
     if(ligado){
         if(op == null){
-            if(numero1.length < 10){
-                numero1 += el.textContent;
-                display.textContent = numero1;
+            if(num1String.length < 10){
+                num1String += el.textContent;
+                numero1 = parseFloat(num1String);
+                display.textContent = num1String;
             }
         }
         else{
-            if(numero2.length < 10){
-                numero2 += el.textContent;
+            if(num2String.length < 10){
+                num2String += el.textContent;
+                numero2 = parseFloat(num2String);
                 display.textContent = numero2;
             }
         }
@@ -29,24 +33,30 @@ function liga_desliga(){
     }
     else{
         display.textContent = "";
-        numero1 = "";
-        numero2 = "";
+        num1String = "";
+        num2String = "";
+        numero1 = 0;
+        numero2 = 0;
         op = null;
     }
 }
 
 function setOperacao(el){
     if(op != null){
+        num1String = "";
+        num2String = "";
         numero1 = result;
-        numero2 = "";
+        numero2 = 0;
         result = null;
     }
     op = el.textContent;
 }
 
 function reset(){
-    numero1 = "";
-    numero2 = "";
+    num1String = "";
+    num2String = "";
+    numero1 = 0;
+    numero2 = 0;
     op = null;
     display.textContent = "0";
 }
@@ -55,13 +65,13 @@ function resultado(){
     if(ligado){
         switch(op){
             case "+":
-                result = parseFloat(numero1) + parseFloat(numero2);
+                result = numero1 + numero2;
             break;
             case "-":
-                result = parseFloat(numero1) - parseFloat(numero2);
+                result = numero1 - numero2;
             break;
             case "*":
-                result = parseFloat(numero1) * parseFloat(numero2);
+                result = numero1 * numero2;
             break;
             case "/":
                 if(numero2 == 0){
@@ -69,7 +79,7 @@ function resultado(){
                     reset();
                 }
                 else{
-                    result = parseFloat(numero1)/parseFloat(numero2);
+                    result = numero1/numero2;
                 }
             break;
             default:

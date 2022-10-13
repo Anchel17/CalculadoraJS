@@ -1,5 +1,5 @@
 :root{
-    --cor-de-fundo: #8a0015;
+    --cor-de-fundo: #bb041f;
     --cor-de-texto: #fffedf;
     --cor-calculadora: #332d27;
     --cor-botoes: #9c9c9caf;
@@ -78,7 +78,6 @@ h1{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*talver precise mudar esse justify-content*/
     justify-content: space-around;
 }
 
