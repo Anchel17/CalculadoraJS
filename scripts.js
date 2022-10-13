@@ -14,21 +14,32 @@ function salvaNum(el){
                 if((num1String.includes('.')) && el.textContent === '.'){
                     return;
                 }
-                num1String += el.textContent;
-                numero1 = parseFloat(num1String);
-                display.textContent = num1String;
+                if(el.textContent === '.'){
+                    num1String += el.textContent;
+                    display.textContent = num1String;
+                }
+                else{
+                    num1String += el.textContent;
+                    numero1 = parseFloat(num1String);
+                    display.textContent = num1String;
+                }
             }
         }
         else{
             if(op === '-' && numero1 === 0){
-                alert("entrou")
                 if(num1String.length < 10){
                     if((num1String.includes('.')) && el.textContent === '.'){
                         return;
                     }
-                    num1String += el.textContent;
-                    numero1 = parseFloat(num1String) * -1;
-                    display.textContent = num1String;
+                    if(el.textContent === '.'){
+                        num1String += el.textContent;
+                        display.textContent = num1String;
+                    }
+                    else{
+                        num1String += el.textContent;
+                        numero1 = parseFloat(num1String) * -1;
+                        display.textContent = numero1;
+                    }
                 }
                 op = null;
                 return;
@@ -38,9 +49,15 @@ function salvaNum(el){
                 if(num2String.includes('.') && el.textContent === '.'){
                     return;
                 }
-                num2String += el.textContent;
-                numero2 = parseFloat(num2String);
-                display.textContent = num2String;
+                if(el.textContent === '.'){
+                    num2String += el.textContent;
+                    display.textContent = num2String;
+                }
+                else{
+                    num2String += el.textContent;
+                    numero2 = parseFloat(num2String);
+                    display.textContent = num2String;
+                }
             }
         }
     }
@@ -49,7 +66,7 @@ function salvaNum(el){
 function liga_desliga(){
     ligado = !ligado;
     if(ligado){
-        display.textContent = "0";
+        display.textContent = "-";
     }
     else{
         display.textContent = "";
