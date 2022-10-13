@@ -11,16 +11,36 @@ function salvaNum(el){
     if(ligado){
         if(op == null){
             if(num1String.length < 10){
+                if((num1String.includes('.')) && el.textContent === '.'){
+                    return;
+                }
                 num1String += el.textContent;
                 numero1 = parseFloat(num1String);
                 display.textContent = num1String;
             }
         }
         else{
+            if(op === '-' && numero1 === 0){
+                alert("entrou")
+                if(num1String.length < 10){
+                    if((num1String.includes('.')) && el.textContent === '.'){
+                        return;
+                    }
+                    num1String += el.textContent;
+                    numero1 = parseFloat(num1String) * -1;
+                    display.textContent = num1String;
+                }
+                op = null;
+                return;
+            }
+
             if(num2String.length < 10){
+                if(num2String.includes('.') && el.textContent === '.'){
+                    return;
+                }
                 num2String += el.textContent;
                 numero2 = parseFloat(num2String);
-                display.textContent = numero2;
+                display.textContent = num2String;
             }
         }
     }
