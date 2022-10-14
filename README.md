@@ -11,4 +11,5 @@
 
 ## Considerações finais
 - Este pequeno projeto teve por objetivo me introduzir à manipulação do DOM. Capturar, tratar
-e apresentar de maneira correta os dados.
+e apresentar de maneira correta os dados;
+- Não trabalhei a responsividade pois esse não era o foco do projeto.
